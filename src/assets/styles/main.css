@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 16px !important;
+    height: auto !important;
+    line-height: unset !important;
+}
+
+.header .logo {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0 8px 12px;
+}
+
+.header .logo img {
+    object-fit: contain;
+    height: 100%;
+}
+
+.ant-space-item-header {
+    padding: 12px;
+}
+
+.ant-space-item-header:hover {
+    background: #252a3d;
+    cursor: pointer;
+}
+
+.group-info-sidebar {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.username-sidebar {
+    color: #fff;
+}
+
+.rolename-sidebar {
+    color: #fff;
+    font-size: 8px;
+}
+
+.login-pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    margin: 0 !important;
+    background-color: #001529;
+}
+
+.container-login {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 12px;
+    width: 70%;
+    min-height: 80vh;
+    background-color: #ffffffe8;
+    border: 2px solid #001529;
+}
+
+.img-login img {
+    width: 100%;
+    height: 100%;
+    animation: animation-img-login 5s linear infinite;
+}
+
+.list-media-server .ant-card-body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.checkbox-custom label {
+    margin-inline-start: 0 !important;
+}
+
+#basic_thumbnail>div:nth-child(1) {
+    width: 100%;
+}
+
+.img-table {
+    object-fit: contain;
+}

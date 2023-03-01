@@ -188,6 +188,7 @@ export default function AccountsPages() {
   };
 
   const onSearch = async () => {
+    setLoadingTable(true);
     const _req = {
       userName: form.getFieldValue("userName") || "",
       fullName: form.getFieldValue("fullName") || "",
@@ -204,6 +205,7 @@ export default function AccountsPages() {
       },
     });
     setData(_res.data || []);
+    setLoadingTable(false);
   };
 
   const columns = [

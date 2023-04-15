@@ -245,7 +245,7 @@ export default function AccountsPages() {
       dataIndex: "roleName",
       render: (_, record) => {
         // return "";
-        return record.role.roleName;
+        return record.role?.roleName;
       },
     },
     {

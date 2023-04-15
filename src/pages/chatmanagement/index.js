@@ -116,7 +116,7 @@ const ChatMangement = () => {
                 <input type='file' onChange={(e) => handleChangeFileMessage(e.target?.files?.[0])} />
             </Modal>
             <Button type="primary" onClick={()=>setIsShowImportExcelModal(true)}>Import Fake User</Button>
-        <Button onClick={()=>setIsShowImportMessageModal(true)} style={{marginLeft: '10px'}} type="primary">Import Fake Messages</Button>
+            <Button onClick={()=>setIsShowImportMessageModal(true)} style={{marginLeft: '10px'}} type="primary">Import Fake Messages</Button>
             <Switch onChange={(value)=>handleChangeMessageControl(value)} checked={messageControl?.auto} style={messageControl?.auto ? {marginLeft: '10px', background: 'green'}: {marginLeft: '10px', background: 'red'}}/><span style={{color: 'black', marginLeft: '5px'}}>Bật tự động chat</span>
         </div>
     )

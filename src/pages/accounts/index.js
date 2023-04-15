@@ -59,10 +59,10 @@ export default function AccountsPages() {
 
   const fetchDataAccount = async () => {
     setLoadingTable(true);
-    if (form.getFieldValue("userName") || form.getFieldValue("fullName")) {
-      setLoadingTable(false);
-      return;
-    }
+    // if (form.getFieldValue("userName") || form.getFieldValue("fullName")) {
+    //   setLoadingTable(false);
+    //   return;
+    // }
 
     const _paging = {
       pageIndex: tableParams.pagination.current,
@@ -104,8 +104,16 @@ export default function AccountsPages() {
 
   const onFinish = async (values) => {
     setLoading(true);
+    const _req = {
+      userName: values.userName,
+      password: values.password,
+      fullName: values.fullName,
+      phoneNumber: values.phoneNumber,
+      activeStatus: values.activeStatus,
+      role: values.roleId,
+    };
     if (!values.id) {
-      const _res = await insertUser(values);
+      const _res = await insertUser(_req);
       if (_res?.data === null) {
         setLoading(false);
         return api["error"]({
@@ -121,14 +129,6 @@ export default function AccountsPages() {
         });
       }
     } else {
-      const _req = {
-        userName: values.userName,
-        password: values.password,
-        fullName: values.fullName,
-        phoneNumber: values.phoneNumber,
-        activeStatus: values.activeStatus,
-        role: values.roleId,
-      };
       const _res = await updateUser(values?.id, _req);
       if (_res?.data === null) {
         setLoading(false);
@@ -244,6 +244,7 @@ export default function AccountsPages() {
       title: "Vai trò",
       dataIndex: "roleName",
       render: (_, record) => {
+        // return "";
         return record.role.roleName;
       },
     },

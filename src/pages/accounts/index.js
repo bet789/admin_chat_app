@@ -409,7 +409,7 @@ export default function AccountsPages() {
                   listRole?.map((item, i) => {
                     return {
                       value: item._id,
-                      label: item.roleName,
+                      label: item?.roleName,
                     };
                   })
                 }

@@ -8,6 +8,7 @@ import AccountsPages from "../pages/accounts";
 
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import ChatMangement from "../pages/chatmanagement";
+import ChatUserManagement from "../pages/ChatUserManagement";
 
 const { Content, Sider } = Layout;
 
@@ -56,10 +57,17 @@ const authProtectedRoutes = [
     icon: <UserSwitchOutlined />,
     children: [
       {
-        label: "Tài Khoản",
+        label: "Tin Nhắn",
         key: "chats",
         path: "/manage-chats",
         component: <ChatMangement />,
+        icon: null,
+      },
+      {
+        label: "Người dùng",
+        key: "chats-user",
+        path: "/manage-chats-user",
+        component: <ChatUserManagement />,
         icon: null,
       },
     ],

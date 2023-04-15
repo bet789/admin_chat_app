@@ -122,11 +122,7 @@ export default function HeaderCustom() {
       <div className="logo">
         <img src={logo} alt="" />
       </div>
-      <div>
-        <Button type="primary" onClick={()=>setIsShowImportExcelModal(true)}>Import Fake User</Button>
-        <Button onClick={()=>setIsShowImportMessageModal(true)} style={{marginLeft: '10px'}} type="primary">Import Fake Messages</Button>
-        <Switch onChange={(value)=>handleChangeMessageControl(value)} checked={messageControl?.auto} style={messageControl?.auto ? {marginLeft: '10px', background: 'green'}: {marginLeft: '10px', background: 'red'}}/><span style={{color: 'white', marginLeft: '5px'}}>Bật tự động chat</span>
-      </div>
+    
         
       <Dropdown
         menu={{

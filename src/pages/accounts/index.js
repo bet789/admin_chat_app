@@ -245,7 +245,7 @@ export default function AccountsPages() {
       dataIndex: "roleName",
       render: (_, record) => {
         // return "";
-        return record.role.roleName;
+        return record.role?.roleName;
       },
     },
     {
@@ -409,7 +409,7 @@ export default function AccountsPages() {
                   listRole?.map((item, i) => {
                     return {
                       value: item._id,
-                      label: item.roleName,
+                      label: item?.roleName,
                     };
                   })
                 }

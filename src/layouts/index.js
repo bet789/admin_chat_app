@@ -53,19 +53,19 @@ const authProtectedRoutes = [
   },
   {
     label: "QL Chat",
-    key: "manage-chats",
+    key: "chats",
     icon: <UserSwitchOutlined />,
     children: [
       {
         label: "Tin Nhắn",
-        key: "chats",
+        key: "manage-chats",
         path: "/manage-chats",
         component: <ChatMangement />,
         icon: null,
       },
       {
         label: "Người dùng",
-        key: "chats-user",
+        key: "manage-chats-user",
         path: "/manage-chats-user",
         component: <ChatUserManagement />,
         icon: null,
@@ -142,11 +142,11 @@ const AuthProtectedLayout = (props) => {
 
   const handleSetOpenKeys = (expression) => {
     switch (expression) {
-      case "posts":
-        setOpenKeys(["manage-posts"]);
+      case "manage-chats-user":
+        setOpenKeys(["chats"]);
         break;
-      case "categories":
-        setOpenKeys(["manage-categories"]);
+      case "manage-chats":
+        setOpenKeys(["chats"]);
         break;
       case "media":
         setOpenKeys(["manage-media"]);

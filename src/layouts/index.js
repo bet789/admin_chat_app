@@ -7,8 +7,9 @@ import DashboardPage from "../pages/dashboard";
 import AccountsPages from "../pages/accounts";
 
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import ChatMangement from "../pages/chatmanagement";
+import ChatMangement from "../pages/ChatManagement";
 import ChatUserManagement from "../pages/ChatUserManagement";
+import AccountLevel from "../pages/AccountLevel";
 
 const { Content, Sider } = Layout;
 
@@ -47,6 +48,13 @@ const authProtectedRoutes = [
         key: "accounts",
         path: "/accounts",
         component: <AccountsPages />,
+        icon: null,
+      },
+      {
+        label: "Level",
+        key: "level",
+        path: "/level",
+        component: <AccountLevel />,
         icon: null,
       },
     ],

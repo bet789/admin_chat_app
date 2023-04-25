@@ -7,6 +7,7 @@ export const API_USER_UPDATE = "/api/user/update";
 export const API_USER_DELETE = "/api/user/delete";
 export const API_USER_GET_PAGING = "/api/user/getPaging";
 export const API_USER_GET_PAGING_BY_ID = "/api/user/getById";
+export const API_USER_UPDATE_LEVEL = "/api/user/updateUserLevel";
 
 //Role
 export const API_ROLE_INSERT = "/api/role/insert";

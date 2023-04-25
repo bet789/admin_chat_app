@@ -25,6 +25,8 @@ export const getPagingUser = (data) =>
   api.get(`${url.API_USER_GET_PAGING}?${data}`);
 export const getUserById = (id, data) =>
   api.get(`${url.API_USER_GET_PAGING_BY_ID}/${id}`, data);
+export const updateUserLevel = (data) =>
+  api.post(`${url.API_USER_UPDATE_LEVEL}?${data ? data : ""}`);
 
 //Role
 export const insertRole = (data) => api.create(url.API_ROLE_INSERT, data);
